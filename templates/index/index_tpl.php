@@ -72,7 +72,7 @@
         </div>
     </div>
 </div>
-<div class="why pd">
+<div class="why">
     <div class="wrapper">
         <div class="heading_top">
             <div class="heading heading--white">
@@ -82,23 +82,87 @@
             <span class="heading__slogan heading__slogan--white">
                 <?=$slogan['name'.$lang]?>
             </span>
-
             <div>
                 <img src="assets/images/images_new/line02.png" alt="<?=$setting['name'.$lang]?>">
             </div>
         </div>
         <div class="why__list">
             <div class="why__left">
-
+                <?php if(count($why)>1){ ?>
+                <div class="why__item why__item--01">
+                    <div class="why__item--content why__item--content01">
+                        <a href="<?=$why[0][$sluglang]?>" title="<?=$why[0]['name'.$lang]?>">
+                            <span class="why__item--name"><?=$why[0]['name'.$lang]?></span>
+                            <span class="why__item--desc"><?=$why[0]['desc'.$lang]?></span>
+                        </a>
+                    </div>
+                    <div class="why__item--img why__item--img01">
+                        <a href="<?=$why[0][$sluglang]?>" title="<?=$why[0]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '98x98x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $why[0]['photo2'], 'alt' => $why[0]['name'.$lang]])?>
+                        </a>
+                    </div>
+                </div>
+                <?php } ?>
+                <?php if(count($why)>2){ ?>
+                <div class="why__item why__item--02">
+                    <div class="why__item--content why__item--content02">
+                        <a href="<?=$why[1][$sluglang]?>" title="<?=$why[1]['name'.$lang]?>">
+                            <span class="why__item--name"><?=$why[1]['name'.$lang]?></span>
+                            <span class="why__item--desc"><?=$why[1]['desc'.$lang]?></span>
+                        </a>
+                    </div>
+                    <div class="why__item--img why__item--img02">
+                        <a href="<?=$why[1][$sluglang]?>" title="<?=$why[1]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '98x98x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $why[1]['photo2'], 'alt' => $why[1]['name'.$lang]])?>
+                        </a>
+                    </div>
+                </div>
+                <?php } ?>
             </div>
             <div class="why__middle">
-                imgwhy
+                <?php if(!empty($imgwhy)){?>
+                <div class="why__middle--img">
+                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '360x360x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgwhy['photo'], 'alt' => $setting['name'.$lang]]) ?>
+                </div>
+                <?php }?>
             </div>
             <div class="why__right">
-
+                <?php if(count($why)>3){ ?>
+                <div class="why__item why__item--03">
+                    <div class="why__item--img why__item--img03">
+                        <a href="<?=$why[2][$sluglang]?>" title="<?=$why[2]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '98x98x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $why[2]['photo2'], 'alt' => $why[2]['name'.$lang]])?>
+                        </a>
+                    </div>
+                    <div class="why__item--content why__item--content03">
+                        <a href="<?=$why[2][$sluglang]?>" title="<?=$why[2]['name'.$lang]?>">
+                            <span class="why__item--nameright"><?=$why[2]['name'.$lang]?></span>
+                            <span class="why__item--descright"><?=$why[2]['desc'.$lang]?></span>
+                        </a>
+                    </div>
+                </div>
+                <?php } ?>
+                <?php if(count($why)>3){ ?>
+                <div class="why__item why__item--04">
+                    <div class="why__item--img why__item--img04">
+                        <a href="<?=$why[3][$sluglang]?>" title="<?=$why[3]['name'.$lang]?>">
+                            <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '98x98x1', 'upload' => UPLOAD_PRODUCT_L, 'image' => $why[3]['photo2'], 'alt' => $why[3]['name'.$lang]])?>
+                        </a>
+                    </div>
+                    <div class="why__item--content why__item--content03">
+                        <a href="<?=$why[3][$sluglang]?>" title="<?=$why[3]['name'.$lang]?>">
+                            <span class="why__item--nameright"><?=$why[3]['name'.$lang]?></span>
+                            <span class="why__item--descright"><?=$why[3]['desc'.$lang]?></span>
+                        </a>
+                    </div>
+                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
+</div>
+<div class="bg-white">
+
 </div>
 <div class="khachhang pd">
     <div class="wrapper">
@@ -198,21 +262,55 @@
         </div>
     </div>
 </div>
+<div class="blogvideo pd">
+    <div class="wrapper">
+        <div class="blogvideoo">
+            <div class="blogg">
+                <div class="heading_top">
+                    <span class="heading heading-green">Ống hút giấy - bạn cần biết</span>
+                </div>
+                <div class="blog__list">
+                    <?php if(!empty($newsnb)){?>
+                    <div class="owl-page owl-carousel owl-theme" data-xsm-items="1:10" data-sm-items="1:10"
+                        data-md-items="2:10" data-lg-items="2:10" data-xlg-items="3:10" data-rewind="1"
+                        data-autoplay="0" data-loop="0" data-lazyload="0" data-mousedrag="1" data-touchdrag="1"
+                        data-smartspeed="500" data-autoplayspeed="3500" data-dots="0" data-nav="0" data-navtext=""
+                        data-navcontainer="">
+                        <?php foreach($newsnb as $v){?>
+                        <div>
+                            <a href="<?=$v['link']?>" class="blog__item">
+                                <div class="blog__item--img">
+                                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '325x220x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]]) ?>
+                                </div>
+                                <div class="blog__item--content">
+                                    <span class="blog__item--name">
+                                        <?=$v['name'.$lang]?>
+                                    </span>
+                                    <span class="blog__item--date">
+                                        <?=date("j F Y",$v['date_created'])?>
+                                    </span>
+                                    <span class="blog__item--desc">
+                                        <?=$v['desc'.$lang]?>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <?php }?>
+                    </div>
+                    <?php }?>
+                </div>
+            </div>
+            <div class="videoo">
+
+            </div>
+        </div>
+    </div>
+</div>
 <div class="blog pd">
     <div class="wrapper">
         <div class="blogg">
             <div class="heading_top">
-                <div class="heading">
-                    <span>Tin tức sự kiện</span>
-                </div>
-                <div class="slogan">
-                    <span>
-                        <?=$slogan['name'.$lang]?>
-                    </span>
-                </div>
-                <div>
-                    <img src="assets/images/line.png" alt="<?=$setting['name'.$lang]?>">
-                </div>
+                <span class="heading heading-green">Ống hút giấy - bạn cần biết</span>
             </div>
             <div class="blog__list">
                 <?php if (!empty($newsnb)) { ?>
@@ -239,34 +337,6 @@
                             </span>
                         </div>
                     </a>
-                </div>
-                <div class="blog__left">
-                    <div class="slickblog">
-                        <?php foreach ($newsnb as $v) { ?>
-                        <div>
-                            <a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>" class="blog__lef-item">
-                                <div class="blog__left-img hover_sang">
-                                    <?= $func->getImage(['class' => '', 'sizes' => '280x210x1', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-                                </div>
-                                <div class="blog__left-content">
-
-                                    <span class="blog__name"> <?=$v['name'.$lang]?></span>
-                                    <div class="blog__right-date">
-                                        <span
-                                            class="blog__right-date1"><?=date("j F Y",$newsnb[0]['date_created'])?></span>
-                                        <span class="blog__right-date2">
-                                            Tin tức
-                                        </span>
-                                    </div>
-                                    <span class="blog__desc">
-                                        <?=$v['desc'.$lang]?>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <?php } ?>
-                    </div>
                 </div>
                 <?php } ?>
             </div>
