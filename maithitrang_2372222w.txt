@@ -1,0 +1,41 @@
+menu: ong hut giay -> san pham, cong nghe (chung nhan)
+
+danh sach bai viet1 đổi giao diện
+
+giới thiệu nhiều hình ảnh
+
+sản phẩm nổi bật 10 sp
+
+Tại sao chọn trúc việt: nhiều bài viết, 2 hình, click vào tại sao chọn trúc việt vào trang trong
+
+khách hàng trúc việt: album
+
+Chứng nhận: nhiều bài viết
+
+video gắn hình
+
+slogan
+
+slogan footer
+
+footer tự nhập
+
+https://anhdungstraws.com/su-menh/
+
+news
+	dich vu	
+	tin tuc
+newsletter
+
+photo
+	logo
+	banner
+	slide
+	hinh anh gioi thieu	
+	video
+	social
+product
+	san pham 1 cap check nb
+static	
+	gioi thieu	
+	lien he
