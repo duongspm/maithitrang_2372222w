@@ -23,19 +23,24 @@ footer tự nhập
 https://anhdungstraws.com/su-menh/
 
 news
-	dich vu	
+		570x380
 	tin tuc
+	98x98
+	cong nghe
+	su menh
+	chinh sach
 newsletter
 
 photo
-	logo
+	logo 185x85
 	banner
-	slide
+	slide 1366x513
 	hinh anh gioi thieu	
 	video
-	social
+	social 32x32
+	album
 product
-	san pham 1 cap check nb
+	san pham 1 cap check nb 220x220
 static	
 	gioi thieu	
 	lien he

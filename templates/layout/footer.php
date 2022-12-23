@@ -9,15 +9,7 @@
                     <span><?=$setting['name'.$lang]?></span>
                 </div>
                 <div class="footer-info"><?= htmlspecialchars_decode($footer['content' . $lang]) ?></div>
-                <div class="footer-social">
-                    <span>Mạng xã hội:</span>
-                    <?php if(!empty($social)){foreach($social as $v){?>
-                    <a class="social-item" href="<?=$v['link']?>">
-                        <?=$func->getImage(['class' => '', 'sizes' => '40x40x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $setting['name'.$lang]])?>
-                    </a>
-                    <?php }}?>
 
-                </div>
 
             </div>
             <div class="footer-item">

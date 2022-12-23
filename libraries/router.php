@@ -100,10 +100,12 @@ $requick = array(
 	
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
 
-	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
-	
-	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => true),
 
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "su-menh", "type" => "su-menh", "menu" => true),
+
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "cong-nghe", "type" => "cong-nghe", "menu" => true),
+	
 	/* Thư viện ảnh */
 	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thu-vien-anh", "type" => "thu-vien-anh", "menu" => true),
 
@@ -154,21 +156,36 @@ switch ($com) {
 		$titleMain = gioithieu;
 		break;
 
-
+	case 'chinh-sach':
+		$source = "news";
+		$template = "news/news_detail";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Chính sách";
+		break;
+		
 	case 'tin-tuc':
 		$source = "news";
-		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/dichvu";
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
 		$titleMain = "Tin tức";
 		break;
 
-	case 'dich-vu':
+	case 'cong-nghe':
 		$source = "news";
 		$template = isset($_GET['id']) ? "news/news_detail" : "news/dichvu";
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
-		$titleMain = "Dịch vụ";
+		$titleMain = "Công nghệ";
+		break;
+		
+	case 'su-menh':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/dichvu";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Sứ mệnh";
 		break;
 
 	case 'san-pham':
@@ -184,24 +201,6 @@ switch ($com) {
 		$template = "product/product";
 		$seo->set('type', 'object');
 		$titleMain = timkiem;
-		break;
-
-	case 'tags-san-pham':
-		$source = "tags";
-		$template = "product/product";
-		$type = $urlType;
-		$table = $urlTblTag;
-		$seo->set('type', 'object');
-		$titleMain = null;
-		break;
-
-	case 'tags-tin-tuc':
-		$source = "tags";
-		$template = "news/news";
-		$type = $urlType;
-		$table = $urlTblTag;
-		$seo->set('type', 'object');
-		$titleMain = null;
 		break;
 
 	case 'thu-vien-anh':

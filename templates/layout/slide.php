@@ -11,7 +11,7 @@
         <?php foreach($slider as $v) { ?>
         <div class="slideshow-item" owl-item-animation>
             <a class="slideshow-image" href="<?=$v['link']?>" target="_blank" title="<?=$v['name'.$lang]?>">
-                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x500x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x513x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
             </a>
         </div>
         <?php } ?>

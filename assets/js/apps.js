@@ -145,7 +145,7 @@ NN_FRAMEWORK.Pagings = function(){
     /* Products */
     if(isExist($(".paging-product")))
     {
-        loadPaging("api/product.php?perpage=8",'.paging-product');
+        loadPaging("api/product.php?perpage=10",'.paging-product');
     }
     //Phan theo chieu doc
     // if(isExist($(".paging-product-list")))

@@ -41,21 +41,18 @@ $countItems = count($cache->get($sql, $params, 'result', 7200));
 $pagingItems = $pagingAjax->getAllPageLinks($countItems, $pageLink, $eShow);
 ?>
 <?php if ($countItems) { ?>
-<div class="grid-page w-clear">
-	<?php foreach ($items as $k => $v) { ?>
-		<div class="product">
-			<a class="box-product text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
-				<p class="pic-product zoom_hinh hover_sang">
-					<?= $func->getImage(['sizes' => '286x283x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-				</p>
-				<h3 class="name-product text-split"><?= $v['name' . $lang] ?></h3>
-				<p class="price-product">
-					<span class="price-price">Giá: </span>
-					<span class="price-new"><?= ($v['regular_price']) ? $func->formatMoney($v['regular_price']) : "Liên hệ" ?></span>
-				</p>
-			</a>
-		</div>
-	<?php } ?>
+<div class="your-class">
+    <?php foreach ($items as $k => $v) { ?>
+    <div class="product">
+        <a class="box-product text-decoration-none" href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>">
+            <p class="pic-product zoom_hinh hover_sang">
+                <?= $func->getImage(['sizes' => '220x220x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+            </p>
+            <h3 class="name-product text-split"><?= $v['name' . $lang] ?></h3>
+
+        </a>
+    </div>
+    <?php } ?>
 </div>
 
 <div class="pagination-ajax"><?= $pagingItems ?></div>

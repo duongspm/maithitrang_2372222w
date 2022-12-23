@@ -37,9 +37,7 @@ require_once LIBRARIES . 'type/config-type-photo.php';
 
 /* Seo page */
 $config['seopage']['page'] = array(
-    "du-an" => "Dự án",
-    "dich-vu" => "Dịch vụ",
-    "thu-vien-anh" => "Hình ảnh",
+    "san-pham" => "Sản phẩm",
     "tin-tuc" => "Tin tức",
     "gioi-thieu" => "Giới thiệu",
     "lien-he" => "Liên hệ"

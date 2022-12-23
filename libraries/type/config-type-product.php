@@ -1,7 +1,7 @@
 <?php
     /* Sản phẩm */
     $nametype = "san-pham";
-    $config['product'][$nametype]['title_main'] = "Dự án";
+    $config['product'][$nametype]['title_main'] = "Sản phẩm";
     $config['product'][$nametype]['dropdown'] = true;
     $config['product'][$nametype]['list'] = true;
     $config['product'][$nametype]['view'] = true;
@@ -12,15 +12,13 @@
     $config['product'][$nametype]['images'] = true;
     $config['product'][$nametype]['show_images'] = true;
     $config['product'][$nametype]['desc'] = true;
-    $config['product'][$nametype]['desc_cke'] = true;
-
     $config['product'][$nametype]['schema'] = true;
     $config['product'][$nametype]['content'] = true;
     $config['product'][$nametype]['content_cke'] = true;
     $config['product'][$nametype]['seo'] = true;
-    $config['product'][$nametype]['width'] = 390;
-    $config['product'][$nametype]['height'] = 390;
-    $config['product'][$nametype]['thumb'] = '390x390x1';
+    $config['product'][$nametype]['width'] = 220;
+    $config['product'][$nametype]['height'] = 220;
+    $config['product'][$nametype]['thumb'] = '220x220x1';
     $config['product'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
     $config['product'][$nametype]['gallery'] = array(
         $nametype => array(
@@ -64,16 +62,16 @@
             "images_photo" => true,
             "avatar_photo" => true,
             "name_photo" => true,
-            "width_photo" => 590,
-            "height_photo" => 350,
-            "thumb_photo" => '590x350x1',
+            "width_photo" => 260,
+            "height_photo" => 400,
+            "thumb_photo" => '260x400x1',
             "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif'
         )
     );
     $config['product'][$nametype]['seo'] = true;
-    $config['product'][$nametype]['width'] = 590;
-    $config['product'][$nametype]['height'] = 350;
-    $config['product'][$nametype]['thumb'] = '590x350x1';
+    $config['product'][$nametype]['width'] = 260;
+    $config['product'][$nametype]['height'] = 400;
+    $config['product'][$nametype]['thumb'] = '260x400x1';
     $config['product'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
 ?>
