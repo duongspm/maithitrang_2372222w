@@ -546,11 +546,291 @@ img:not([src]) {
 .heading__slogan--white{
   color: white;
 }
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 15px;
+	margin: 0;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.button--mimas {
+  font-weight: bold;
+
+  font-size: 17px;
+
+  border-radius: 3px;
+
+	overflow: hidden;
+	color: #000;
+	background: #e7e7e7;
+}
+
+.button--mimas a {
+	position: relative;
+	mix-blend-mode: difference;
+  font-family: var(--font-primary-R);
+
+}
+
+.button--mimas::before {
+	content: '';
+	background: #dbf71d;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button--mimas:hover::before {
+	transform: translate3d(100%,0,0);
+}
+
 /* tại sao chọn */
 .why{
   background-image: url('../images/bg-why.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.why__item{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.why__item--img{
+  position: relative;
 }
 
+.why__item--img01::before{
+  top: 50%;
+  left: -80px;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: white;
+  position: absolute;
+}
+.why__item--img01::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 50%;
+  border: 1px solid #c6c603;
+  top: -4px;
+  left: -4px;
+  box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+-webkit-box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+-moz-box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+}
+.why__item--img>a>img{
+  border-radius: 50%;
+}
+.why__item--01{
+  gap: 82px;
+}
+.why__item--02{
+  gap: 58px;
+}
+.why__item--03{
+  width: 500px;
+  gap: 80px;
+}
+.why__item--img03{
+  width: 75px;
+}
+.why__item--content03{
+  width: 300px;
+}
+.why__item--content{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+}
+.why__item--content::after{
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #A1DD10;
+  z-index: 2;
+}
+
+.why__item--descright{
+  text-align: left;
+}
+.why__item--nameright{
+  text-align: left;
+}
+.why__item--descright{
+  text-align: left;
+}
+.why__item--content03>a{
+
+}
+.why__item--content03::after{
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #A1DD10;
+  z-index: 2;
+}
+.why__item--content>a{
+  text-decoration: none !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 5px;
+}
+.why__item--name{
+  font-weight: bold;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  text-align: right;
+
+}
+.why__item--desc{
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  text-align: right;
+
+}
+.why__item--01{
+  width: 500px;
+}
+.why__item--content01{
+  width: 300px;
+}
+.why__item--img01{
+  width: 75px;
+}
+.why__item--02{
+  width: 420px;
+}
+.why__item--content02{
+  width: 300px;
+}
+.why__item--img02{
+  width: 75px;
+}
+.why__item--img02::before{
+  top: 50%;
+  left: -60px;
+  content: "";
+  width: 58px;
+  height: 3px;
+  background: white;
+  position: absolute;
+}
+.why__item--img02::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 50%;
+  border: 1px solid #c6c603;
+  top: -4px;
+  left: -4px;
+  box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+-webkit-box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+-moz-box-shadow: 5px 5px 4px 0px rgba(115,230,113,0.75);
+}
+.why__item--img03::before{
+  top: 50%;
+  right: -80px;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: white;
+  position: absolute;
+}
+.why__item--img03::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 50%;
+  border: 1px solid #c6c603;
+  top: -4px;
+  left: -4px;
+  box-shadow: -5px 5px 4px 0px rgba(115,230,113,0.75);
+-webkit-box-shadow: -5px 5px 4px 0px rgba(115,230,113,0.75);
+-moz-box-shadow: -5px 5px 4px 0px rgba(115,230,113,0.75);
+}
+.why__middle--img{
+  /* -webkit-mask-image: url('../images/bg-circle.png');
+  mask-image: url('../images/bg-circle.png');
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat; */
+  position: relative;
+}
+.why__middle--img>img{
+  border-radius: 100%;
+  position: relative;
+  bottom: -45px;
+}
+.why__middle{
+  text-align: center;
+}
+.why__list{
+  /* display: flex; */
+  
+}
+.why__middle--img::after{
+  position: absolute;
+  top: -8px;
+  transform: translateX(-50%);
+  left: 50%;
+  content: "";
+  width: 500px;
+  height: 368px;
+  background-image: url(../images/images_new/bg-item-why.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.bg-white{
+  background: white;
+  content: "";
+  width: 100%;
+  height: 55px;
+  position: relative;
+  z-index: 3;
+}
 /* tại sao chọn */
 
 /* Header */
@@ -3498,103 +3778,27 @@ coccocgrammar {
 
 /* tiêu chí */
 /* Tin tức */
-.blog {
-  background-image: url("../images/bg-about.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.blog__list {
+.blog__item{
   display: flex;
-  gap: 30px;
-  margin-top: 20px;
+  flex-direction: column;
 }
-.blog__right,
-.blog__left {
-  width: 50%;
-}
-.blog__right-img {
-  overflow: hidden;
-}
-.blog__right-img > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.blog__right-content {
+.blog__item--content{
+  padding: 25px 20px;
+  border: 1px solid gray;
+  border-top: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
-  border: 1px solid #b2b2b2;
-  border-top: none;
 }
-.blog__right-item {
-  text-decoration: none !important;
-  color: #000;
-}
-.blog__right-date {
+.blogvideoo{
   display: flex;
-  gap: 10px;
+  gap: 35px;
 }
-.blog__right-content:hover .blog__name {
-  color: var(--color-primary);
+.blog__list{
+  width: 65%;
 }
-.blog__left-content:hover .blog__name {
-  color: var(--color-primary);
-}
-.blog__name {
-  transition: 0.2s linear;
-  font-size: 15px;
-  font-family: "Muli-Bold", sans-serif;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-}
-.blog__desc {
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-}
-.blog__right-date2 {
-  color: var(--color-primary);
-}
-.blog__lef-item {
-  text-decoration: none !important;
-  color: #000;
-  display: flex;
-  padding: 15px 0;
-  border-bottom: 1px dotted gray;
-  position: relative;
-}
-.blog__lef-item::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 0;
-  width: 30px;
-  height: 60px;
-  background-color: var(--color-primary);
-  transition: 0.2s linear;
-}
-.blog__lef-item:hover::after {
-  top: 90px;
-}
-.blog__left-img {
-  width: 33%;
-}
-.blog__left-content {
-  width: 66%;
-  padding: 20px;
-  background-color: white;
-  margin-right: 30px;
+.videoo{
+  width: 35%;
 }
 /* Tin tức */
 
@@ -4434,11 +4638,7 @@ a:hover {
   .flipster__button {
     display: none;
   }
-  .blog__left-img > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+
   .control-congtrinh {
     display: none;
   }
@@ -4621,14 +4821,8 @@ a:hover {
   .about__right {
     margin-top: 0;
   }
-  .blog__list {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .blog__left,
-  .blog__right {
-    width: 100%;
-  }
+
+ 
   .about__left,
   .about__right {
     width: 100%;
