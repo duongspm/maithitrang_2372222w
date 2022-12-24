@@ -4,7 +4,7 @@
 	$type = (!empty($_GET["type"])) ? htmlspecialchars($_GET["type"]) : '';
 ?>
 <?php if($type == 'video-fotorama') {
-	$video_home = $d->rawQuery("select link_video, id, name$lang from #_photo where type = ? and act <> ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb, id desc",array('video','photo_static')); if(count($video_home)) { ?>
+	$video_home = $d->rawQuery("select link_video, id, name$lang from #_photo where type = ? and act <> ? and find_in_set('hienthi',status) order by numb, id desc",array('videoclips','photo_static')); if(count($video_home)) { ?>
 <div id="fotorama-videos" data-width="100%" data-thumbmargin="10" data-height="330" data-fit="cover"
     data-thumbwidth="140" data-thumbheight="80" data-allowfullscreen="true" data-nav="thumbs">
     <?php foreach($video_home as $k => $v) { ?>

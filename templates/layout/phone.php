@@ -1,4 +1,4 @@
-<div class="phone_mobi goidienthoai">
+<!-- <div class="phone_mobi goidienthoai">
     <ul>
         <li class="goidien">
             <a title="title" id="goidien">
@@ -36,7 +36,7 @@
         </li>
 
     </ul>
-</div>
+</div> -->
 
 <script type="text/javascript" src="assets/js/jQuery.WCircleMenu-min.js"></script>
 <script type="text/javascript">

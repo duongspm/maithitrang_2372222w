@@ -2,74 +2,84 @@
     <div class="wrapper">
         <div class="footerr">
             <div class="footer-item">
+                <div class="footer__heading">
+                    <span class="heading heading--white"><?=$setting['name'.$lang]?></span>
+                    <span class="slogan__footer slogan--ft">
+                        <?=$sloganfooter['name'.$lang]?>
+                    </span>
+                </div>
+
                 <div class="footer-title">
                     <span>Thông tin liên hệ</span>
-                </div>
-                <div class="footer-name">
-                    <span><?=$setting['name'.$lang]?></span>
+                    <div class="footer__line"></div>
                 </div>
                 <div class="footer-info"><?= htmlspecialchars_decode($footer['content' . $lang]) ?></div>
-
-
             </div>
-            <div class="footer-item">
+            <div class="footer-item footer-item02">
                 <div class="footer-title">
-                    <span>truy cập nhanh</span>
-                    <div class="footer_line"></div>
+                    <span>Chính sách khách hàng</span>
+                    <div class="footer__line"></div>
                 </div>
                 <div class="footer__list">
+                    <?php if(!empty($policy)){?>
                     <ul>
-                        <li><a href="" title="Giới thiệu">Trang chủ</a></li>
-                        <li><a href="gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
-
-                        <li><a href="dich-vu" title="Dịch vụ">Dịch vụ</a></li>
-
-                        <li><a href="san-pham" title="Dự án">Dự án</a></li>
-
-                        <li><a href="thu-vien-anh" title="Hình ảnh">Hình ảnh</a></li>
-
-                        <li><a href="video" title="Video">Video</a></li>
-
-                        <li><a href="tin-tuc" title="Tin tức">Tin tức</a></li>
-                        <li><a href="lien-he" title="Liên hệ">Liên hệ</a></li>
-
+                        <?php foreach($policy as $v) {?>
+                        <li><a href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a></li>
+                        <?php }?>
                     </ul>
+                    <?php }?>
                 </div>
             </div>
-            <div class="footer-item">
-                <div class="footer-title">
-                    <span>Fanpage facebook</span>
-                    <div class="footer_line"></div>
-                </div>
-                <div class="footer-fb">
-                    <div class="fb-page" data-href="<?=$optsetting['fanpage']?>" data-tabs="timeline" data-width="500"
-                        data-height="250" data-small-header="true" data-adapt-container-width="true"
-                        data-hide-cover="false" data-show-facepile="true">
-                        <div class="fb-xfbml-parse-ignore">
-                            <blockquote cite="<?=$optsetting['fanpage']?>">
-                                <a href="<?=$optsetting['fanpage']?>">Facebook</a>
-                            </blockquote>
-                        </div>
+            <div class="footer-item footer-item03">
+                <div class="dangky-frame">
+                    <div class="dangky__heading">
+                        <span>đăng ký nhận tin</span>
+                        <p>Nhập thông tin của bạn để nhận tin mới nhất</p>
+                    </div>
+                    <div class="dangky-form">
+                        <form class="validation-newsletter" novalidate method="post" action=""
+                            enctype="multipart/form-data">
+                            <div class="dangky-form">
+                                <div class="newsletter-input">
+                                    <input type="text" class="form-controld form-d1 text-sm" id="fullname-newsletter"
+                                        name="dataNewsletter[fullname]" placeholder="Nhập họ tên" required />
+                                    <div class="invalid-tooltip">Vui lòng nhập họ tên</div>
+                                </div>
+
+                                <div class="newsletter-input">
+                                    <input type="number" class="form-controld form-d1 text-sm" id="phone-newsletter"
+                                        name="dataNewsletter[phone]" placeholder="Nhập điện thoại" required />
+                                    <div class="invalid-tooltip">Vui lòng nhập số điện thoại</div>
+                                </div>
+
+                                <div class="newsletter-input">
+                                    <textarea rows="5" cols="50" class="form-textarea text-sm" id="content-newsletter"
+                                        name="dataNewsletter[content]" placeholder="Nhập nội dung" required></textarea>
+                                    <div class="invalid-tooltip">Vui lòng nhập nội dung</div>
+                                </div>
+
+                                <div class="formgroup">
+                                    <div class="newsletter-button">
+                                        <input type="submit" class="btn-f btn btn-danger w-100" name="submit-newsletter"
+                                            value="ĐĂNG KÝ NGAY" disabled>
+                                        <input type="hidden" class="btn btn-sm btn-danger w-100"
+                                            name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyright">
+    <div class="copyright mr-top">
         <div class="wrapper copyrightt">
             <div class="copyright-left">
-                <span>Copyright © <span class="settingname">
+                <span>Copyright © 2022 <span class="settingname">
                         <?=$setting['name'.$lang]?>
-                    </span>. Powered by Nina Co.,Ltd</span>
-            </div>
-            <div class="copyright-right">
-                <span><?= dangonline ?>: <?= $online ?></span>
-                <span>|</span>
-                <span><?= homnay ?>: <?= $counter['today'] ?></span>
-                <span>|</span>
-                <span><?= trongthang ?>: <?= $counter['month'] ?></span>
-                <span>|</span>
-                <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
+                    </span>. Design by Nina.,Ltd</span>
             </div>
         </div>
     </div>

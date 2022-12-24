@@ -19,7 +19,7 @@
     $thuvienanh = $cache->get("select id, type, name$lang,slugen ,desc$lang,slugvi ,photo, date_created, date_updated, options from #_product where type = ?  and find_in_set('hienthi',status) order by numb,id desc",array('thu-vien-anh'), 'result', 7200);
     $why = $cache->get("select name$lang, slugvi, slugen, desc$lang, id, photo2 from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('why'), 'result', 7200);
     $productnb = $cache->get("select name$lang,photo,desc$lang,slugvi,slugen,regular_price, id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
-    $videoclipd = $cache->get("select name$lang,desc$lang, photo, link_video from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('videoclipd'), 'result', 7200);
+    $videoclips = $cache->get("select name$lang,desc$lang, photo, link_video from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('videoclips'), 'result', 7200);
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
     $about = $cache->get("select name$lang,desc$lang,content$lang from #_static where type = ? and find_in_set('hienthi',status) order by id desc", array('gioi-thieu'), 'result', 7200);
     //need

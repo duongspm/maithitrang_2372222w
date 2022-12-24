@@ -74,14 +74,14 @@
     $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
     
     /* Video */
-    $nametype = "videoclipd";
-    $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Video";
+    $nametype = "videoclips";
+    $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Video Clips";
     $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
     $config['photo']['man_photo'][$nametype]['number_photo'] = 4;
     $config['photo']['man_photo'][$nametype]['video_photo'] = true;
     $config['photo']['man_photo'][$nametype]['name_photo'] = true;
-    $config['photo']['man_photo'][$nametype]['images_photo'] = true;
-    $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+    // $config['photo']['man_photo'][$nametype]['images_photo'] = true;
+    // $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
     $config['photo']['man_photo'][$nametype]['width_photo'] = 500;
     $config['photo']['man_photo'][$nametype]['height_photo'] = 335;
     $config['photo']['man_photo'][$nametype]['thumb_photo'] = '500x335x1';

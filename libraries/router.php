@@ -96,9 +96,10 @@ $requick = array(
 	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
 
 	/* Video */
-	array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
+	array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "videoclips", "type" => "videoclips", "menu" => true),
 	
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "why", "type" => "why", "menu" => true),
 
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => true),
 
@@ -170,6 +171,14 @@ switch ($com) {
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
 		$titleMain = "Tin tức";
+		break;
+
+	case 'why':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/dichvu";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Tại sao chọn chúng tôi";
 		break;
 
 	case 'cong-nghe':

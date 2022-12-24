@@ -6,10 +6,10 @@ if (!defined('SOURCES')) die("Error");
 // $banner = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner', 'photo_static'), 'fetch', 7200);
 
 // $product = $cache->get("select id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
-// $productlist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
 // $productcat = $cache->get("select name$lang, slugvi, slugen, id from #_product_cat where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
 // $dichvu = $cache->get("select * from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
 
+$productlist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
 $footer = $cache->get("select name$lang, content$lang from #_static where type = ? limit 0,1", array('footer'), 'fetch', 7200);
 $favicon = $cache->get("select photo from #_photo where type = ? and act = ? and find_in_set('hienthi',status) limit 0,1", array('favicon', 'photo_static'), 'fetch', 7200);
 $logo = $cache->get("select id, photo, options from #_photo where type = ? and act = ? limit 0,1", array('logo', 'photo_static'), 'fetch', 7200);
@@ -32,9 +32,9 @@ if (!empty($_POST['submit-newsletter'])) {
     $dataNewsletter = (!empty($_POST['dataNewsletter'])) ? $_POST['dataNewsletter'] : null;
 
     /* Valid data */
-    if (empty($dataNewsletter['email'])) {
-        $flash->set('error', 'Email không được trống');
-    }
+    // if (empty($dataNewsletter['email'])) {
+    //     $flash->set('error', 'Email không được trống');
+    // }
 
     if (!empty($dataNewsletter['email']) && !$func->isEmail($dataNewsletter['email'])) {
         $flash->set('error', 'Email không hợp lệ');

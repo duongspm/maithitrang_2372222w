@@ -31,10 +31,10 @@
 			$response['messages'][] = 'Địa chỉ không được trống';
 		}
 
-		if(empty($dataContact['email']))
-		{
-			$response['messages'][] = 'Email không được trống';
-		}
+		// if(empty($dataContact['email']))
+		// {
+		// 	$response['messages'][] = 'Email không được trống';
+		// }
 
 		if(!empty($dataContact['email']) && !$func->isEmail($dataContact['email']))
 		{

@@ -131,10 +131,10 @@
 					$response['messages'][] = 'Ngày sinh không hợp lệ';
 				}
 
-				if(empty($email))
-				{
-					$response['messages'][] = 'Email không được trống';
-				}
+				// if(empty($email))
+				// {
+				// 	$response['messages'][] = 'Email không được trống';
+				// }
 
 				if(!empty($email))
 				{
@@ -451,10 +451,10 @@
 			$response['messages'][] = 'Ngày sinh không hợp lệ';
 		}
 
-		if(empty($email))
-		{
-			$response['messages'][] = 'Email không được trống';
-		}
+		// if(empty($email))
+		// {
+		// 	$response['messages'][] = 'Email không được trống';
+		// }
 
 		if(!empty($email))
 		{
@@ -614,10 +614,10 @@
 			$response['messages'][] = 'Tài khoản chỉ được nhập chữ thường và số (chữ thường không dấu, ghi liền nhau, không khoảng trắng)';
 		}
 
-		if(empty($email))
-		{
-			$response['messages'][] = 'Email không được trống';
-		}
+		// if(empty($email))
+		// {
+		// 	$response['messages'][] = 'Email không được trống';
+		// }
 
 		if(!empty($email) && !$func->isEmail($email))
 		{
