@@ -189,7 +189,7 @@
             <div class="why__middle">
                 <?php if(!empty($imgwhy)){?>
                 <div class="why__middle--img">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '360x360x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgwhy['photo'], 'alt' => $setting['name'.$lang]]) ?>
+                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '420x420x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $imgwhy['photo'], 'alt' => $setting['name'.$lang]]) ?>
                 </div>
                 <?php }?>
             </div>
